@@ -1,0 +1,44 @@
+{extend name='base'/}
+{block name='base1'}
+
+<script>
+	function checkForm(){ 
+       var texttip = checktext(); 
+       return texttip; 
+       } 
+	   function checkText(){
+		   var text = document.getElementById('info_text').value;
+		   var l = document.getElementById('info_text').length;
+		   var textErr = document.getElementById('err_text');
+		   
+		   if(text == ''){
+			textErr.innerHTML="请填写邮箱内容";
+			return false;
+		   }else{
+			
+			 return true;
+		   }
+	   }
+</script>
+<div class="banner">
+        <div class="banner-pos banner1" style="background:none;" >
+			<div class="banner-posit animated wow zoomIn" data-wow-delay=".5s" style="width:65%;background:rgba(72, 206, 128, 0.8);position:absolute;margin-right:15%;height:80%;">
+				<form action="{:url('admin/info/add')}" method="post" onSubmit="return checkForm()">
+				<h2><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>公告发布系统</h2>
+				<div class="reservation">
+					 <div class="book_date" style="margin-top:2rem;">
+							   <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+							   <input class="date" id="datepicker" type="text" value="" onfocus="this.value = '';"  required="" placeholder="公告标题" name="info_title">
+							   <p id="err_title" style="color:red"></p>
+					   </div>	
+					<div class="book" style="margin-top:2rem;">
+							<textarea  onfocus="this.value = '';"  name="info_text" onBlur="checkText()" oninput="checkText()" id="info_text" maxlength="200" style="font-size:16px;"></textarea>
+							<p id="err_text" style="color:red"></p>
+							<input type="submit" value="发布公告">
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>	
+	</div>
+{/block}

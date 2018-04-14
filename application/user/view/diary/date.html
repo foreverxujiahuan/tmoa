@@ -1,0 +1,62 @@
+{extend name='base'/}
+{block name='base1'}
+
+
+<div class="container" >
+           <div class="row py-3 pl-3"  style="letter-spacing: 2px;" >
+                   <h5 class ="col-md-3">我的工作日志</h5>
+                   <span class=" offset-md-7 " id="timeP"></span> 
+                
+           </div>
+          
+          <div class="D_content  mr-5" style="background-color: #fff;letter-spacing: 2px;"> 
+             <div class="row" class="D_left" style="height: 100%; ">
+                <div class="col-3 " style="padding-right: 0px;border-right: 1px solid #000;">            
+                        <div class="d-flex flex-column text-dark">
+                        <div class="p-2 "><i class="fa fa-street-view mr-2" style="font-size:24px"></i>个人</div>
+                        <hr>
+                          <div class="p-2 list  " data-toggle="modal" data-target="#exampleModalCenter" >
+                         <i class="fa fa-calendar"  style="font-size:24px"></i> 日历
+                          </div>
+                          
+                          <div class="p-2 list "><i class="fa fa-check-square-o mr-2" style="font-size:24px"></i>评阅</div>
+                       
+                          <div class="p-2 list "><i class="fa fa-star-o mr-2"  style="font-size:24px"></i>共享日志</div>
+                          <div class="p-2 list "><i class="fa fa-star mr-2" style="font-size:24px"></i>已关注日志</div>
+                         
+                        </div>
+                </div>
+                <div class="col-9" style="padding-left: 0px;">     
+               
+                  <div class="p-3 text-white" style="background-color: #b2c0d1;"><h5>超级管理员</h5></div>
+                   <div class="p-3 text-white " style="border-bottom: 1px solid #000"><button type="button" class="btn btn-primary mr-3">写工作日志</button>
+                   <button type="button" class="btn btn-secondary " disabled>删除</button>
+                   <form class="form-inline my-2 my-lg-0 float-md-right float-none">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                   </form>
+                  </div>
+                  <div id="ba" >
+                    
+                  </div>
+
+                          
+               </div>
+
+             
+         </div>
+       </div>  
+  {/block}
+
+<!--   <span id="testView"></span>
+<div id="test2"></div>
+-->
+<!-- 【JS】:      
+//嵌套在指定容器中
+laydate.render({
+  elem: '#test2'
+  ,position: 'static'
+  ,change: function(value, date){ //监听日期被切换
+    lay('#testView').html(value);
+  }
+}); -->

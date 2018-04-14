@@ -1,0 +1,44 @@
+{extend name='base'/}
+{block name='base1'}
+<div class="panel-body">
+       <table class="table table-hover">
+           <thead>
+               <tr>
+                   <td>id</td>
+                   <td>姓名</td>
+                   <td>座位</td>
+                   <td>职务</td>
+                   <td>操作1</td>
+                   <td>操作2</td>
+               </tr>
+           </thead>
+           <tbody>
+                {foreach name='data' item='vo'}
+      <tr>
+         <td>{$vo['user_id']}</td>
+         <td>{$vo['user_name']}</td>
+         <td>{$vo['user_seat']}</td>
+         <td>{$vo['user_job']}</td>
+         <td><a href="javascript:;"onclick="del({$vo['user_id']})">删除</a></td>
+         <td><a href="{:url('admin/Officeb/store',['user_id'=>$vo['user_id']])}">编辑</a></td>
+      </tr>
+                {/foreach}
+           </tbody>
+       </table>
+   </div>
+   <form action="" method="post">
+        <div id="adduser">
+                <p><a href="{:url('admin/Officeb/add')}" class="btn btn-primary btn-lg" role="button">
+                      添加成员</a>
+                     </p>
+                </div>
+    </form>
+   <script>
+    function del(user_id){
+        util.confirm('确定删除吗?',function(){
+     location.href="{:url('del')}"+'?user_id='+user_id;
+   })
+     
+    }
+</script>
+{/block}

@@ -1,0 +1,168 @@
+{extend name='base'/}
+{block name='base1'}
+
+
+<div class="container" >
+           <div class="row py-3 pl-3"  style="letter-spacing: 2px;" >
+                   <h5 class ="col-md-3">我的工作日志</h5>
+                   <span class=" offset-md-7 " id="timeP"></span> 
+                
+           </div>
+          
+          <div class="D_content  mr-5" style="background-color: #fff;letter-spacing: 2px;"> 
+             <div class="row" class="D_left" style="height: 100%; ">
+                <div class="col-3 " style="padding-right: 0px;border-right: 1px solid #000;">            
+                        <div class="d-flex flex-column text-dark">
+                        <div class="p-2 "><i class="fa fa-street-view mr-2" style="font-size:24px"></i>个人</div>
+                        <hr>
+                          <div class="p-2 list  " data-toggle="modal" data-target="#exampleModalCenter" >
+                         <i class="fa fa-calendar"  style="font-size:24px"></i> 日历
+                          </div>
+                          
+                          <div class="p-2 list "><i class="fa fa-check-square-o mr-2" style="font-size:24px"></i>评阅</div>
+                       
+                          <div class="p-2 list "><i class="fa fa-star-o mr-2"  style="font-size:24px"></i>共享日志</div>
+                          <div class="p-2 list "><i class="fa fa-star mr-2" style="font-size:24px"></i>已关注日志</div>
+                         
+                        </div>
+                </div>
+                <div class="col-9" style="padding-left: 0px;">     
+               
+                  <div class="p-3 text-white" style="background-color: #b2c0d1;"><h5>超级管理员</h5></div>
+               
+                    
+           <div class="layui-form-item mt-3 ">
+                <div class="layui-inline">
+              <label class="layui-form-label">标题</label>
+              <div class="layui-input-inline">
+                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+              </div>
+            </div>
+            <div class="layui-inline">
+              <label class="layui-form-label">日期</label>
+              <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="test1">
+              </div>
+            </div>
+               <div class="layui-inline">
+               <label class="layui-form-label">方位图</label>
+       
+               <i class="layui-icon" onclick="showmap()" style="font-size: 16px; color: red;">&#xe715;</i>  
+            
+            </div>
+          </div>
+                 <textarea class="mx-auto" id="container1" style="height:300px;width:96%;"></textarea>
+                   <div class="layui-form-item">
+                  <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                  </div>
+                </div>
+
+          <!--        <fieldset class="site-demo-button" style="margin-top: 10px;">
+            
+             <div>
+               
+               <button class="layui-btn layui-btn-normal">百搭按钮</button>
+               <button class="layui-btn layui-btn-normal">百搭按钮</button>
+               <button class="layui-btn layui-btn-normal">百搭按钮</button>
+               
+             </div>
+                            </fieldset>   -->  
+               </div>
+
+             
+         </div>
+       </div>  
+          <script>
+              layui.use('laydate', function(){
+                var laydate = layui.laydate;
+                
+                //执行一个laydate实例
+                laydate.render({
+                  elem: '#test1' //指定元素
+                });
+              });
+              </script>
+               <script>
+                      require(['hdjs'], function (hdjs) {
+                         hdjs.ueditor('container1', {hash: 2, data: 'hd'}, function (editor) {
+                              console.log(editor)
+                          });
+                      })
+                  </script>
+
+<script>
+    require(['hdjs'])
+    function showmap() {
+        require(['hdjs'], function (hdjs) {
+            hdjs.map({lng:121.480237,lat:31.236305}, function (res) {
+                //返回值是数组
+                console.log("地址:" + res.address + ";经度" + res.lng + ";纬度:" + res.lat);
+            });
+        });
+    }
+</script>
+       <script>
+    require(['hdjs']);
+    //上传图片
+    function upImagePc() {
+        require(['hdjs'], function (hdjs) {
+            var options = {
+                multiple: false,//是否允许多图上传
+                //data是向后台服务器提交的POST数据
+                data: {name: '后盾人', year: 2099},
+            };
+            hdjs.image(function (images) {
+                //上传成功的图片，数组类型
+                $("[name='thumb']").val(images[0]);
+                $(".img-thumbnail").attr('src', images[0]);
+            }, options)
+        });
+    }
+
+    //移除图片
+    function removeImg(obj) {
+        $(obj).prev('img').attr('src', '../dist/static/image/nopic.jpg');
+        $(obj).parent().prev().find('input').val('');
+    }
+</script>
+  {/block}
+
+<!--   <span id="testView"></span>
+<div id="test2"></div>
+-->
+<!-- 【JS】:      
+//嵌套在指定容器中
+laydate.render({
+  elem: '#test2'
+  ,position: 'static'
+  ,change: function(value, date){ //监听日期被切换
+    lay('#testView').html(value);
+  }
+}); -->
+//信息
+  <!-- <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="color: #000;">
+                <ul class="layui-tab-title">
+                  <li class="layui-this">网站设置</li>
+                  <li>用户管理</li>
+                  <li>权限分配</li>
+                  <li>商品管理</li>
+                  <li>订单管理</li>
+                </ul>
+                <div class="layui-tab-content">
+                  <div class="layui-tab-item layui-show">内容1</div>
+                  <div class="layui-tab-item">内容2</div>
+                  <div class="layui-tab-item">内容3</div>
+                  <div class="layui-tab-item">内容4</div>
+                  <div class="layui-tab-item">内容5</div>
+                </div>
+                             </div>
+               
+                             <script>
+                             //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+                             layui.use('element', function(){
+                var element = layui.element;
+                
+                //…
+                             });
+                             </script> -->

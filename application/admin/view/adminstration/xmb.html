@@ -1,0 +1,35 @@
+{extend name='base'/}
+{block name='content'}
+   <div class="panel-body">
+       <table class="table table-hover">
+           <thead>
+               <tr>
+                   <td>id</td>
+                   <td>姓名</td>
+                   <td>班级</td>
+                   <td>电话</td>
+                   <td>操作1</td>
+                   <td>操作2</td>
+               </tr>
+           </thead>
+           <tbody>
+                {foreach name='data' item='vo'}
+      <tr>
+         <td>{$vo['user_id']}</td>
+         <td>{$vo['user_name']}</td>
+         <td>{$vo['user_class']}</td>
+         <td>{$vo['user_phone']}</td>
+         <td><a href="#"onclick="">删除</a></td>
+         <td><a href="#"onclick="">编辑</a></td>
+      </tr>
+                {/foreach}
+           </tbody>
+       </table>
+   </div>
+   <div id="adduser">
+   <p><a class="btn btn-primary btn-lg" role="button">
+         添加成员</a>
+        </p>
+   </div>
+  
+{/block}

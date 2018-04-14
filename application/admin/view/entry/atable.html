@@ -1,0 +1,193 @@
+{extend name='base'/}
+{block name='base1'}
+<div class="layui-container">  
+
+
+ <div class="wrap" style="font-size:18px;text-decoration: none;text-align: center;" >
+          <table border="3" text-align="center" cellpadding="19" cellspacing="14" height="500px" >
+              <caption class="pp " style="text-align: center;"><h1>排课表显示<i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe60c;</i> </h1></caption>
+                  <tr >
+                      <th colspan="2"> &nbsp;</th>
+                      <th style="text-align: center;">星期一</th>
+                      <th style="text-align: center;">星期二</th>
+                      <th style="text-align: center;">星期三</th>
+                      <th style="text-align: center;">星期四</th>
+                      <th style="text-align: center;">星期五</th>
+                  </tr>
+                  <tr>
+                      <th rowspan="2">上午</th>
+                      <th>一</th>
+                   <td style="text-align: center;">  {foreach
+                        name="data[0]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}  </td>
+                 <td style="text-align: center;">{foreach
+                        name="data[5]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                 <td style="text-align: center;">{foreach
+                        name="data[10]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                 <td style="text-align: center;">{foreach
+                        name="data[3]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                 <td style="text-align: center;">{foreach
+                        name="data[4]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                  </tr>
+                  <tr>
+                      <th>二</th>
+                      <td style="text-align: center;">{foreach
+                        name="data[1]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[6]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[11]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[16]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[17]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                  </tr>
+                  <tr>
+                      <th rowspan="2">下午</th>
+                      <th>三</th>
+                      <td style="text-align: center;">{foreach
+                        name="data[2]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[7]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[12]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[17]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[22]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                  </tr>
+                  <tr>
+                      <th>四</th>
+                      <td style="text-align: center;">{foreach
+                        name="data[3]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[8]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[13]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[18]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[23]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                  </tr>
+                  <tr >
+                      <th height="60" colspan="2">晚上</th>
+                      <td style="text-align: center;">{foreach
+                        name="data[4]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[9]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[14]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[19]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                      <td style="text-align: center;">{foreach
+                        name="data[24]"
+                        item="vo"
+                        key="k"}
+                       {$vo.table_username},
+                 {/foreach}</td>
+                  </tr>
+          </table>
+          <div class="p1">
+                 <font>
+              <em>注释:</em>2016-2017学期班级课表。
+              </font>
+          </div>
+      </div> 
+
+
+{/block}

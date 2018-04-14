@@ -1,0 +1,99 @@
+{extend name='base'/}
+{block name='base1'}
+<div class="layui-container">  
+<div class="layui-row" style="text-align: center;font-size:23px;text-decoration: none; ">
+   <div class="layui-col-md4 layui-col-md-offset4" style="margin-top:60px;margin-bottom: 15px;">
+	<h2 style="letter-spacing: 3px;">课程表<i class="layui-icon" style="font-size: 30px; color: #1E9FFF;">&#xe60c;</i>  </h2>
+	</div>
+	</div>
+	<form action="" method="post">
+	<div class="layui-row tr1" style="text-align: center;font-size:23px;text-decoration: none; ">
+
+	   <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      周次节
+        </div>
+         <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      星期一
+        </div>
+         <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      星期二
+         </div>
+         <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+     星期三
+        </div>
+         <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      星期四
+        </div>
+
+         <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      星期五
+        </div>
+	  </div>
+	  <div class="layui-row tr1" style="text-align: center;font-size:23px;text-decoration: none; ">
+
+	   <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+       一
+        </div>
+        
+           <input type="text"  name="table_a1" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td "  maxlength="1"
+           onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" >
+           <input type="text"  name="table_b1" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');">
+          <input type="text"  name="table_c1" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');">
+          <input type="text"  name="table_d1" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');">
+
+          <input type="text" name="table_e1" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');">
+	  </div>
+	  <div class="layui-row tr1" style="text-align: center;font-size:23px;text-decoration: none; ">
+
+	   <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      二
+        </div>
+          <input type="text" name="table_a2" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+          <input type="text"  name="table_b2" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+           <input type="text" name="table_c2" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+           <input type="text" name="table_d2" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+
+           <input type="text" name="table_e2" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+	  </div>
+	  <div class="layui-row tr1" style="text-align: center;font-size:23px;text-decoration: none; ">
+
+	   <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+     中
+        </div>
+           <input type="text" name="table_a3" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+           <input type="text" name="table_b3" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+          <input type="text" name="table_c3" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+            <input type="text" name="table_d3" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+
+           <input type="text" name="table_e3" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+	  </div>
+	  <div class="layui-row tr1" style="text-align: center;font-size:23px;text-decoration: none; ">
+
+	   <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      三
+        </div>
+         <input type="text" name="table_a4" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+           <input type="text" name="table_b4" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+           <input type="text" name="table_c4" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+            <input type="text" name="table_d4" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+
+         <input type="text" name="table_e4" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+	  </div>
+	  <div class="layui-row tr1" style="text-align: center;font-size:23px;text-decoration: none; ">
+
+	   <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 td1">
+      四
+        </div>
+          <input type="text" name="table_a5" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+          <input type="text" name="table_b5" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+          <input type="text" name="table_c5" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+           <input type="text" name="table_d5" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" required="required">
+
+            <input type="text" name="table_e5" class="layui-col-xs2 layui-col-sm2 layui-col-md2 td " maxlength="1" onkeyup="this.value=this.value.replace(/[^\0-1\.]+/,'');" l>
+	  </div>
+
+	   <div class="layui-row " style="text-align: center;font-size:23px;text-decoration: none; margin-top: 20px; ">
+	        <button type="submit" class="layui-btn-normal layui-btn-fluid" style="padding: 18px;cursor: pointer;letter-spacing:9px;">确认提交</button>
+	   </div>
+  </form>
+{/block}

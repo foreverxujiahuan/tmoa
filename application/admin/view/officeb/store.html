@@ -1,0 +1,33 @@
+{extend name='base'/}
+{block name='base1'}
+            <form class="form-horizontal" id="form"  action="" method="post">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">编辑用户</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">姓名</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="user_name" value="{$oldData['user_name']}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">座位</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="user_seat" value="{$oldData['user_seat']}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">职务</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="user_job" value="{$oldData['user_job']}">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <input type="hidden" name="user_id" value="{:input('param.user_id')}">
+                <button class="btn btn-primary" type="submit">确定</button>
+            </form>
+{/block}

@@ -1,0 +1,165 @@
+{extend name='base'/}
+{block name='base1'}
+
+  <div class="top_bg">
+    <div class="second_menu container">
+          <div class="row">
+            <div class="second_main col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <button class="btn btn-primary second_main_button" type="submit">办公门户</button>
+              <button class="btn btn-primary second_main_button_next" type="submit">个人办公</button>
+              <div class="second_menu_date" id="timeP">
+                           </div>
+            </div>
+          </div>
+    </div>
+    <div class="container menu_main_bg">
+        <div class="row">
+        
+          <a href="{:url('user/email/index')}" title="邮件发送系统" target="_blank" class="menu_icon_hover">
+            <div class="spn ml-3 my-1 menu_icon" >
+              
+              <img src="__STATIC__/user/image/icon/icon_mail.png" class="menu_icon_img">
+              <div class="menu_icon_bg">
+                     <p class="menu_icon_text">邮件</p>
+              </div>
+              
+            </div>
+          </a>
+          <a href="{:url('user/diary/index')}" title="提供办公室工作日志发布" target="_blank" class="menu_icon_hover">
+              <div class="spn ml-3 my-1 menu_icon" >
+               <image src="__STATIC__/user/image/icon/icon_diary.png" class="menu_icon_img"></image>
+                <div class="menu_icon_bg">
+                      <p class="menu_icon_text">日志</p>
+                </div>
+            </div>
+          </a>
+          <a href="{:url('user/summary/index')}" title="提供办公室总结的计划" target="_blank" class="menu_icon_hover">
+              <div class="spn ml-3 my-1 menu_icon"  >
+                <image src="__STATIC__/user/image/icon/icon_summary.png" class="menu_icon_img"></image>
+                  <div class="menu_icon_bg">
+                        <p class="menu_icon_text">总结</p>
+                  </div>
+            </div>
+          </a>
+          <a href="{:url('user/personpic/index')}" title="个人资料" target="_blank" class="menu_icon_hover">
+              <div class="spn ml-3 my-1 menu_icon" >
+                <image src="__STATIC__/user/image/icon/icon_person.png" class="menu_icon_img"></image>
+                  <div class="menu_icon_bg">
+                        <p class="menu_icon_text">个人资料</p>
+                  </div>
+            </div>
+          </a>
+          <a href="{:url('user/information/index')}" title="提供新闻信息发布" target="_blank" class="menu_icon_hover">
+            <div class="spn ml-3 my-1 menu_icon"  >
+              <image src="__STATIC__/user/image/icon/icon_information.png" class="menu_icon_img"></image>
+                <div class="menu_icon_bg">
+                      <p class="menu_icon_text">信息中心</p>
+                </div>
+            </div>
+          </a>
+          <a href="Notice.html" title="发布信息公告" target="_blank" class="menu_icon_hover">
+            <div class="spn ml-3 my-1 menu_icon"  >
+              <image src="__STATIC__/user/image/icon/icon_public.png" class="menu_icon_img"></image>
+                <div class="menu_icon_bg">
+                      <p class="menu_icon_text">公告</p>
+                </div>
+            </div>
+          </a>
+          <a href="../../../../message/index.html" title="短信通知" target="_blank" class="menu_icon_hover">
+            <div class="spn ml-3 my-1 menu_icon" >
+              <image src="__STATIC__/user/image/icon/icon_msg.png" class="menu_icon_img msg">  </image>
+                <div class="menu_icon_bg">
+                      <p class="menu_icon_text">开会通知</p>
+                </div>
+            </div>
+          </a>
+          <a href="#" title="短信通知" target="_blank" class="menu_icon_hover">
+            <div class="spn ml-3 my-1 menu_icon" >
+              <image src="__STATIC__/user/image/icon/icon_news.png" class="menu_icon_img msg">  </image>
+                <div class="menu_icon_bg">
+                      <p class="menu_icon_text">新闻中心</p>
+                </div>
+            </div>
+          </a>
+          <a href="{:url('user/sign/index')}" title="短信通知" target="_blank" class="menu_icon_hover">
+            <div class="spn ml-3 my-1 menu_icon" >
+              <image src="__STATIC__/user/image/icon/icon_date.png" class="menu_icon_img msg"></image>
+                <div class="menu_icon_bg">
+                      <p class="menu_icon_text">签到</p>
+                </div>
+            </div>
+          </a>
+       </div>
+    </div>
+    </div>
+
+    <div class="container main_menu" style="padding: 0px;">
+    <div class="row" style="padding: 0px;">
+        
+                <div class="mb-3 col-md-6 col-sm-6">
+                 <div class="menu_public">
+                    
+                          <div class="main_menu_top">
+                            <h4 class="main_menu_text" style="color:black">通知公告</h4>
+                          </div>
+                          <hr id="public_hr">
+                          {foreach name='data' key='key' item='vo' length='5'}
+                       <p style="color:black;margin-left:0.5rem;margin-top:0.5rem;margin-bottom:0.5rem;" id="info_title_public"><a style="color:black;margin-left:0.5rem;" href="javascript:void(0);" onclick="infoshow()" >{$vo['info_title']}</a></p>
+                       <hr style="margin:0;padding:0;" id="info_title_hr">
+                       {/foreach}
+                       {foreach name='data' key='key' item='vo'}
+                       <p style="color:black;margin-left:0.5rem;display:none" id="info_text_public">{$vo['info_text']}</p>
+                       {/foreach}
+                       <input type="button" onclick="titleshow()" id="info_button" class="btn btn-primary" style="display:none;margin-left:75%;" value="返回">
+                 </div>
+                </div>
+                <div class="col-md-6 col-sm-6 ">
+                    <div class="menu_myjob">
+                      
+                         <h4 class="main_menu_text" style="color:black">新闻中心</h4>
+                      <hr>
+                
+                       {foreach
+                          name="data1"
+                          item="vo"
+                          key="k"}
+                       <p class="px-5 mt-2" style="font-size: 14px;" ><i class="layui-icon mr-2" style="font-size: 14px; color: red;">&#xe756;</i>  <a href="{$vo.news_url}" target="_blank"> {$vo.news_name}</a></p>
+                      {/foreach}
+                      
+                    </div>
+                </div>
+    </div>
+
+    </div>
+    <div class="container main_menu">
+      <div class="row">
+    
+                  <div class=" mb-3  col-md-6 col-sm-6 ">
+                   <div class="menu_diary">
+                            <div class="main_menu_top">
+                              <h4 class="main_menu_text" style="color:black">工作总结</h4>
+                            </div>
+                            <hr id="public_hr">
+                            <div style=" background-image:url('__STATIC__/user/image/empty_personal.png');
+                            height:83.2%;background-repeat:no-repeat;background-size:100% 100%;">
+                              <a href="#" style="height:50px;width:50px"></a>
+                            </div>
+                   </div>
+                  </div>
+                  <div class=" col-md-6 col-sm-6 ">
+                        <div class="menu_mail">
+                           <div class="main_menu_top">
+                             <h4 class="main_menu_text" style="color:black">代办事宜</h4>
+                           </div>
+                           <hr id="myjob_hr">
+                           <button type="button" class="btn btn-default btn-lg" style="margin-left:12rem;margin-top:6rem">点击添加事宜</button>
+                        </div>
+                  </div>
+         
+      </div>
+  
+      </div>
+ 
+{/block}
+
+
